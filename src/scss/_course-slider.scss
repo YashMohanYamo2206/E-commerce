@@ -1,0 +1,30 @@
+@import "./variables";
+
+.course-slider {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 100%;
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  &__underline {
+    display: block;
+    margin-top: 2rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgba($color-black, 0.15);
+  }
+
+  &__container {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 16fr 1fr;
+  }
+}

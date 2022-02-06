@@ -1,15 +1,16 @@
 @import "./variables";
 
 .search {
-  width: 28rem;
+  width: 38rem;
   height: 3rem;
   border-radius: 10rem;
   border: 2px solid $color-black;
   outline: none;
-  &__form {
-    @include sm {
-      display: none;
-    }
+  @include md{
+    width: 20rem;
+  }
+  @include sm{
+    width: 18rem;
   }
   &::placeholder {
     padding-left: 3rem;
