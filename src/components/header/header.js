@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderCenter from "./headercenter";
 import HeaderLeft from "./headerLeft"
 import HeaderRight from "./headerRight";
 
@@ -6,7 +7,7 @@ const Header = () => {
     return (
         <div className="header">
             <HeaderLeft/>
-            <div className="header__center">center</div>
+            <HeaderCenter/>
             <HeaderRight/>
         </div>
     );

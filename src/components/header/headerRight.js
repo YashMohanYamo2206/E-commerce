@@ -1,12 +1,13 @@
 import React from "react";
-// import FaPencil from 'react-icons/lib/fa/fapencil';
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import HeaderLogin from "./headerLogin";
 
 
 const HeaderRight = () => {
     return (
         <div className="header__right">
-          rigjht  {/* <FaPencil className="header__right--cart"/> */}
-
+           <AiOutlineShoppingCart className="header__right--cart"/>
+            <HeaderLogin/>
         </div>
     );
 }
