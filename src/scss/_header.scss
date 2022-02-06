@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100vw;
+  height: 7rem;
+  overflow: hidden;
+  align-items: center;
+
+  &__left {
+    width: 30%;
+    &--image {
+      display: flex;
+      width: 80%;
+      cursor: pointer;
+    }
+  }
+  &__center {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  &__right {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+
+    &--cart {
+      display: flex;
+      height: 3rem;
+      width: 3rem;
+      cursor: pointer;
+    }
+  }
+}
