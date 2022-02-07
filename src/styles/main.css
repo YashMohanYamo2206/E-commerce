@@ -128,7 +128,9 @@ body {
       outline: none;
       transition: all 0.4s;
       cursor: pointer;
-      appearance: none; }
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none; }
       .header__right--login:hover {
         background-color: #f7f7f7;
         color: #1dace3;
@@ -146,12 +148,32 @@ body {
   @media (max-width: 596px) {
     .search {
       width: 18rem; } }
+  .search::-webkit-input-placeholder {
+    padding-left: 3rem;
+    font-size: 1.5rem; }
+  .search::-moz-placeholder {
+    padding-left: 3rem;
+    font-size: 1.5rem; }
+  .search:-ms-input-placeholder {
+    padding-left: 3rem;
+    font-size: 1.5rem; }
+  .search::-ms-input-placeholder {
+    padding-left: 3rem;
+    font-size: 1.5rem; }
   .search::placeholder {
     padding-left: 3rem;
     font-size: 1.5rem; }
   .search:focus {
     border: 2px solid #1dace3;
     padding-left: 4rem; }
+    .search:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .search:focus::-moz-placeholder {
+      color: transparent; }
+    .search:focus:-ms-input-placeholder {
+      color: transparent; }
+    .search:focus::-ms-input-placeholder {
+      color: transparent; }
     .search:focus::placeholder {
       color: transparent; }
   .search__icon {
@@ -289,17 +311,33 @@ body {
     width: 100%;
     grid-template-columns: 1fr 16fr 1fr; }
   .course-slider__slideout {
-    animation-name: slide-out;
-    animation-duration: 0.2s; }
+    -webkit-animation-name: slide-out;
+            animation-name: slide-out;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s; }
   .course-slider__slidein {
-    animation-name: slide-in;
-    animation-duration: 0.2s; }
+    -webkit-animation-name: slide-in;
+            animation-name: slide-in;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s; }
   .course-slider__slideout-right {
-    animation-name: slideoutRight;
-    animation-duration: 0.2s; }
+    -webkit-animation-name: slideoutRight;
+            animation-name: slideoutRight;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s; }
   .course-slider__slidein-right {
-    animation-name: slideinRight;
-    animation-duration: 0.2s; }
+    -webkit-animation-name: slideinRight;
+            animation-name: slideinRight;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s; }
+
+@-webkit-keyframes slide-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0); }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%); } }
 
 @keyframes slide-out {
   0% {
@@ -309,7 +347,23 @@ body {
     opacity: 0;
     transform: translateX(-100%); } }
 
+@-webkit-keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 @keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@-webkit-keyframes slideinRight {
   0% {
     opacity: 0;
     transform: translateX(100%); }
@@ -324,6 +378,14 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+@-webkit-keyframes slideoutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0); }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%); } }
 
 @keyframes slideoutRight {
   0% {
