@@ -2,12 +2,14 @@
 
 .header {
   display: flex;
-  position: relative;
+  position: fixed;
   justify-content: space-between;
   width: 100vw;
   height: 7rem;
   overflow: hidden;
   align-items: center;
+  z-index: 111110;
+  background-color: $color-grey-light;
   box-shadow: 0 0.3rem 0.5rem rgba($color-blue-light, 0.65);
   &__left {
     width: 30%;
