@@ -126,8 +126,15 @@
   }
   &__courses {
     display: grid;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     grid-template-columns: 1fr 1fr 1fr;
+    @include md{
+      grid-template-columns: 1fr 1fr;
+    }
+    @include sm{
+      grid-template-columns: 1fr;
+    }
   }
   &__title {
     display: block;
@@ -192,7 +199,7 @@
 @keyframes slideinRight {
   0% {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
   100% {
     opacity: 1;
@@ -207,6 +214,6 @@
   }
   100% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
 }
