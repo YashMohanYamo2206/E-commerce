@@ -10,7 +10,8 @@
     width: 20rem;
   }
   @include sm{
-    width: 18rem;
+    display: hidden;
+    // width: 18rem;
   }
   &::placeholder {
     padding-left: 3rem;

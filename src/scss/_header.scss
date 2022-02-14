@@ -17,26 +17,39 @@
       display: flex;
       width: 80%;
       cursor: pointer;
+      
     }
   }
   &__center {
     width: 40%;
     display: flex;
     justify-content: center;
+    @include sm{
+      display: none;
+      // width: 18rem;
+    }
   }
   &__right {
     width: 30%;
     display: flex;
     padding-right: 4rem;
     justify-content: end;
+    @include sm{
+      width: 40%;
+      // width: 18rem;
+    }
 
     &--cart {
       align-self: center;
       display: flex;
       height: 3rem;
       width: 3rem;
-      margin-right: 1.6rem;
+      margin-right: 1rem;
       cursor: pointer;
+      @include sm{
+        width: 40%;
+        // width: 18rem;
+      }
     }
 
     &--login {

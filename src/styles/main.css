@@ -11,6 +11,12 @@
   box-sizing: inherit;
   overflow-x: hidden; }
 
+.page-container {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 23rem); }
+
 html {
   font-size: 62.5%; }
   @media (max-width: 992px) {
@@ -35,7 +41,7 @@ body {
 .cta-top {
   position: relative;
   display: flex;
-  margin-top: 10rem;
+  margin-top: 3rem;
   justify-content: center;
   align-items: center; }
   .cta-top__img {
@@ -124,18 +130,27 @@ body {
     width: 40%;
     display: flex;
     justify-content: center; }
+    @media (max-width: 596px) {
+      .header__center {
+        display: none; } }
   .header__right {
     width: 30%;
     display: flex;
     padding-right: 4rem;
     justify-content: end; }
+    @media (max-width: 596px) {
+      .header__right {
+        width: 40%; } }
     .header__right--cart {
       align-self: center;
       display: flex;
       height: 3rem;
       width: 3rem;
-      margin-right: 1.6rem;
+      margin-right: 1rem;
       cursor: pointer; }
+      @media (max-width: 596px) {
+        .header__right--cart {
+          width: 40%; } }
     .header__right--login {
       height: 4rem;
       width: 12rem;
@@ -170,7 +185,7 @@ body {
       width: 20rem; } }
   @media (max-width: 596px) {
     .search {
-      width: 18rem; } }
+      display: hidden; } }
   .search::placeholder {
     padding-left: 3rem;
     font-size: 1.5rem; }
@@ -369,3 +384,46 @@ body {
   100% {
     opacity: 0;
     transform: translateX(100%); } }
+
+:export {
+  screen-sm-max: 596px;
+  screen-md-max: 768px;
+  screen-lg-max: 992px; }
+
+.footer {
+  align-items: flex-end;
+  position: relative;
+  flex-direction: column;
+  height: 16rem;
+  width: 100vw;
+  z-index: 999;
+  background-color: #ffffff;
+  overflow: hidden; }
+  .footer__page-break {
+    border-bottom: 2px solid rgba(170, 120, 120, 0.3); }
+  .footer__top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
+    .footer__top--link {
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-decoration: none;
+      color: #1dace3;
+      margin: 2rem 2rem 0 2rem;
+      text-align: center;
+      transition: all 0.4s; }
+      .footer__top--link:hover {
+        color: #001a49; }
+  .footer__lowest {
+    overflow: hidden;
+    display: flex;
+    width: 100vw;
+    height: 10rem;
+    align-items: center;
+    justify-content: space-between; }
+    .footer__lowest--logo {
+      width: 30%; }
+    .footer__lowest--copyright {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-right: 4rem; }

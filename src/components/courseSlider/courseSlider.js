@@ -26,7 +26,7 @@ let courseList = courseCopy.map((course) => {
 
 
 const CourseSlider = () => {
-    const { height, width } = useWindowDimensions();
+    const {  width } = useWindowDimensions();
     const [courseCount, setCourseCount] = useState(0);
     const [courseSliderAnimate, setCourseSliderAnimate] = useState('course-slider__courses');
 

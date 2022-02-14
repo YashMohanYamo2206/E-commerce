@@ -9,6 +9,13 @@
   overflow-x: hidden;
 }
 
+.page-container{
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 23rem);
+}
+
 html {
   font-size: 62.5%;
 
