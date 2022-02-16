@@ -5,6 +5,7 @@ import Header from "../src/components/header/header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Auth from "./pages/auth.js";
 import Footer from "./components/footer/footer.js";
+import Product from "./components/productinfo/Product.js";
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Header />
         <div className="page-container">
           <Routes>
-            <Route path="/auth" element={<Auth />} />
             <Route path="/" element={<Landing />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/product" element={<Product />} />
           </Routes>
         </div>
           <Footer />

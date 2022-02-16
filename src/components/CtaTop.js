@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ctaTop } from "../dummyData/courses";
 
 const CtaTop = () => {
@@ -9,11 +10,13 @@ const CtaTop = () => {
                 <div className="cta-top__textBox--title">{ctaTop.title}</div>
                 <div className="cta-top__textBox--adText">{ctaTop.adText}</div>
                 <div className="cta-top__textBox--tagLine">{ctaTop.tagline}</div>
-                <input
-                    type="submit"
-                    className="cta-top__textBox--button"
-                    value={ctaTop.buttonTitle}
-                />
+                <Link to = "/product">
+                    <input
+                        type="submit"
+                        className="cta-top__textBox--button"
+                        value={ctaTop.buttonTitle}
+                    />
+                </Link>
             </div>
         </div>
     );
