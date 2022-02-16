@@ -1,0 +1,30 @@
+@import "./variables";
+
+.product-features{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 20rem;
+    padding: 2rem;
+    &__title{
+        font-size: 2.8rem;
+        font-weight: 600;
+    }
+
+    &__feature{
+        display: flex;
+        font-size: 1.8rem;
+        &--check{
+            margin: 0 1rem 0 1rem;
+        }
+
+    }
+
+    &__list{
+        position: relative;
+        display: grid;
+        column-gap: 3rem;
+        row-gap: 2rem;
+        // grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
+    }
+}
