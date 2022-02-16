@@ -1,11 +1,11 @@
 @import "./variables";
 
 .footer {
-    align-items: flex-end;
-//   margin-top: 7rem;
+  align-items: flex-end;
+  //   margin-top: 7rem;
   position: relative;
   flex-direction: column;
-  height: 16rem;
+  max-height: 14rem;
   width: 100vw;
   z-index: 999;
   background-color: $color-white;
@@ -30,6 +30,7 @@
     }
   }
   &__lowest {
+    margin-top: 1rem;
     overflow: hidden;
     display: flex;
     width: 100vw;
@@ -38,12 +39,12 @@
     justify-content: space-between;
 
     &--logo {
-      width: 30%;
+      width: 15%;
     }
-    &--copyright{
-        font-size: 1.4rem;
-        font-weight: 600;
-        margin-right: 4rem;
+    &--copyright {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-right: 4rem;
     }
   }
 }

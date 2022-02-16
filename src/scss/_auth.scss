@@ -5,7 +5,8 @@
   display: flex;
   flex-direction: column;
   height: 24rem;
-  width: 20rem;
+  width: 35%;
+  max-height: 30rem;
   margin: 1.4rem auto 3rem auto;
   outline: 2px solid rgba($color-slate-dark, 0.2);
   outline-offset: 1rem;
@@ -40,7 +41,8 @@
   }
 
   &__header {
-    width: 20rem;
+    margin: auto;
+    width: 75%;
     transform: translateY(-0.7rem) scale(1.8);
   }
 
@@ -57,7 +59,7 @@
       background-color: rgba($color-grey-light, 0.5);
       outline: none;
       z-index: 100;
-
+      padding-left: 1.4rem;
       &::placeholder {
         padding-left: 1.4rem;
       }

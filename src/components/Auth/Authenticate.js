@@ -3,6 +3,11 @@ import logo from "../../imgs/logo.svg"
 const Authenticate = () => {
     const [submitVal, setSubmitVal] = useState("Login")
 
+    const onLoginSignup = (e) => {
+        e.preventDefault();
+
+    }
+
     const optionsClick = (e) => {
         console.log(e.target.id);
         setSubmitVal(e.target.id);
@@ -30,28 +35,33 @@ const Authenticate = () => {
                 />
                 <form className="auth__form">
 
-                    {submitVal === "Signup" ? <input
-                        className="auth__form--input"
-                        type="text"
-                        placeholder="Full Name"
-                    /> : <></>}
+                    {submitVal === "Signup" &&
+                        <input
+                            className="auth__form--input"
+                            type="text"
+                            placeholder="Full Name"
+                        />
+                    }
                     <input
                         className="auth__form--input"
                         type="text"
-                        placeholder="email"
+                        placeholder="Email"
                     />
 
                     <input
                         className="auth__form--input"
                         type="password"
-                        placeholder="password"
+                        placeholder="Password"
                     />
 
-                    <input
+                    
+
+                    <button
                         className="auth__form--submit"
-                        type="submit"
-                        value={submitVal}
-                    />
+                        onSubmit={(e) => onLoginSignup(e)}
+                    >
+                        {submitVal}
+                    </button>
 
                 </form>
             </div>
