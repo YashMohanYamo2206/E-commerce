@@ -52,13 +52,15 @@ const Authenticate = () => {
                         className="auth__form--input"
                         type="password"
                         placeholder="Password"
+
                     />
 
                     
-
+                    
                     <button
                         className="auth__form--submit"
                         onSubmit={(e) => onLoginSignup(e)}
+                        disabled = {true}
                     >
                         {submitVal}
                     </button>
