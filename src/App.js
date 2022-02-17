@@ -5,7 +5,7 @@ import Header from "../src/components/header/header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Auth from "./pages/auth.js";
 import Footer from "./components/footer/footer.js";
-import Product from "./components/productinfo/Product.js";
+import Product from "./pages/Product";
 
 function App() {
   return (

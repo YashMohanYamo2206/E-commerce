@@ -8,14 +8,20 @@
   height: 36rem;
 
   &__buynow {
+    border-radius: 2rem;
     position: fixed;
+    width: 35%;
     right: 0;
-    width: 33%;
     margin: 3rem 3rem 2rem 2rem;
     background-color: $color-grey-light;
     border: 1px solid $color-grey-light;
     box-shadow: 0 0.7rem 1.2rem rgba($color-black, 0.2);
-
+    @include md{
+      position: relative;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
     &--top {
       height: 18rem;
       width: 100%;
@@ -41,8 +47,15 @@
           font-size: 1.6rem;
           margin: 3rem 3rem 2rem 2rem ;
 
+          @include md{
+            font-size: 2.6rem;
+          }
+
           &--medium{
               margin-left: 2rem;
+              @include md{
+                font-size: 1.6rem;
+              }
           }
       }
       &--addtocart {
@@ -78,6 +91,10 @@
     width: 50%;
     margin: 3rem;
     color: $color-grey-light;
+
+    @include md{
+      width: 100%;
+    }
 
     &--title {
       font-size: 3.5rem;

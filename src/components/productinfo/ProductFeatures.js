@@ -18,10 +18,10 @@ const ProductFeatures = () => {
 
   return (
     <div className="product-features">
-        <div className="product-features__title">Topis Covered</div>
+        <u className="product-features__title">Topis Covered</u>
         <div className="product-features__list">{makeFeatures}</div>
     </div>
   )
 }
 
-export default ProductFeatures
+export default ProductFeatures;
